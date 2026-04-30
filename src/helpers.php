@@ -1,12 +1,12 @@
 <?php
 
-if (! function_exists('faker')) {
+if (! function_exists('faker') && class_exists(\Xefi\Faker\Faker::class)) {
     /**
      * Get a faker instance.
      *
      * @param  string|null  $locale
      */
-    function faker(null|string $locale = '') : \Xefi\Faker\Faker
+    function faker(?string $locale = ''): \Xefi\Faker\Faker
     {
         if ($locale === '') {
             $locale = app()->bound('config') ?
