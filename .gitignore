@@ -2,3 +2,5 @@
 composer.lock
 .phpunit*
 .idea
+packages.php
+faker_mixin.php
